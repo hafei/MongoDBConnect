@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
+using System;
+using System.Linq;
 
 namespace MongoDBConnect
 {
-
     public class MongoHelper : IDisposable
     {
-
         protected static IMongoClient Client;
         protected static IMongoDatabase Database;
 
@@ -42,7 +37,6 @@ namespace MongoDBConnect
         //    return Client;
         //}
 
-
         //protected virtual void Dispose(bool disposing)
         //{
         //    if (disposing)
@@ -50,12 +44,12 @@ namespace MongoDBConnect
         //    }
         //}
 
-
         public MongoHelper(string dbName)
         {
             Client = new MongoClient(new MongoUrl(ConnectionString));
             Database = Client.GetDatabase(dbName);
         }
+
         public T SelectOne<T>(string collectionName, FilterDefinition<BsonDocument> filter)
         {
             var collection = Database.GetCollection<BsonDocument>(collectionName);
@@ -66,7 +60,6 @@ namespace MongoDBConnect
             }
             return BsonSerializer.Deserialize<T>(result.ElementAt(0));
         }
-
 
         public bool Insert(string collectionName, BsonDocument doc)
         {
