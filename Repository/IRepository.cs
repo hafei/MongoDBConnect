@@ -21,5 +21,7 @@ namespace Repository
         void Add<T>(T item) where T : class, new();
 
         void Add<T>(IEnumerable<T> items) where T : class, new();
+
+        void Insert<T>(T item) where T : class, new();
     }
 }

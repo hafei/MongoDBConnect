@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBConnectTests", "Mong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{FEE1723E-782C-4D13-83EE-F1FD0EAB9954}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryTests", "RepositoryTests\RepositoryTests.csproj", "{43E6B96F-5D9C-40C0-9D8E-CC5A054FE960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FEE1723E-782C-4D13-83EE-F1FD0EAB9954}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEE1723E-782C-4D13-83EE-F1FD0EAB9954}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEE1723E-782C-4D13-83EE-F1FD0EAB9954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E6B96F-5D9C-40C0-9D8E-CC5A054FE960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E6B96F-5D9C-40C0-9D8E-CC5A054FE960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E6B96F-5D9C-40C0-9D8E-CC5A054FE960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E6B96F-5D9C-40C0-9D8E-CC5A054FE960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

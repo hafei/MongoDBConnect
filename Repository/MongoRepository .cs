@@ -1,8 +1,10 @@
-﻿using Norm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using MongoDB.Driver;
+using Norm;
+using IMongoDatabase = Norm.IMongoDatabase;
 
 namespace Repository
 {
@@ -28,6 +30,11 @@ namespace Repository
             {
                 Add(item);
             }
+        }
+
+        public void Insert<T>(T item) where T : class, new()
+        {
+            _db.GetCollection<T>().Insert(item);
         }
 
         public IQueryable<T> All<T>() where T : class, new()
