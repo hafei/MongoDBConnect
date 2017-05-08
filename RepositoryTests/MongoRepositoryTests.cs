@@ -41,7 +41,7 @@ namespace Repository.Tests
         [TestMethod()]
         public void AllTest()
         {
-            var count = repository.All<Info>().Count(x => x.name == "zhangmeng");
+            var count = repository.All<Info>().Count(x => x.name == "STEVEN DUFFY");
             Assert.AreEqual(1, count);
         }
 

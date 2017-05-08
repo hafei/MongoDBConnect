@@ -122,8 +122,8 @@
       <HintPath>..\packages\MvcPaging.2.1.7\lib\net40\MvcPaging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\RepositoryUncle.1.0.3\lib\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Norm, Version=0.9.8.0, Culture=neutral, processorArchitecture=MSIL">
@@ -174,6 +174,14 @@
       <HintPath>..\packages\RepositoryUncle.1.0.3\lib\ServiceStack.Text.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="SysSurge.Slazure.Core.Light, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slazure.Core.Light.1.4\lib\net45\SysSurge.Slazure.Core.Light.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SysSurge.Slazure.MongoDB.Light, Version=1.4.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Slazure.MongoDB.Light.1.4.3\lib\net45\SysSurge.Slazure.MongoDB.Light.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -197,6 +205,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InfoCollection.cs" />
     <Compile Include="MongoRepository .cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="PagingExtensions.cs" />
@@ -205,6 +214,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MongoDBDataAccess\MongoDBDataAccess.csproj">
+      <Project>{EA26F1A1-AFED-4629-A649-F29A5EEBC3FD}</Project>
+      <Name>MongoDBDataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
